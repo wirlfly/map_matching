@@ -21,7 +21,7 @@ class Edge(EdgeTuple):
 
     def __new__(_cls, id, start_node, end_node, cost, reverse_cost, reversed=False):
         """Create new instance of Edge(id, start_node, end_node, cost, reverse_cost, reversed)"""
-        return tuple.__new__(_cls, (id, start_node, end_node, cost, reverse_cost, reversed))
+        return tuple.__new__(_cls, (id, start_node, end_node, float(cost), float(reverse_cost), reversed))
 
     def reversed_edge(self):
         """Create a new edge which is reverse to self."""
